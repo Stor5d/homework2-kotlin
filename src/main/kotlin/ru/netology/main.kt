@@ -1,7 +1,10 @@
 package ru.netology
 
 fun main() {
-    val likes = 11
-    val text = if ((((likes - 1) % 10) == 0) && (likes != 11)) "человеку" else "людям"
-    println("Понравилось $likes $text")
+    println(likesText(21))
+}
+
+fun likesText(likes: Int): String {
+    val text = if ((((likes - 1) % 10) == 0) && (likes % 100 != 11)) "человеку" else "людям"
+    return "Понравилось $likes $text"
 }
